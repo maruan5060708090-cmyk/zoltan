@@ -1,0 +1,17 @@
+import { useState } from "react"; import { Button } from "@/components/ui/button"; import { Card, CardContent } from "@/components/ui/card"; import { Input } from "@/components/ui/input"; import { motion } from "framer-motion";
+
+export default function ZoltanLogin() { const [username, setUsername] = useState(""); const [password, setPassword] = useState(""); const [loggedIn, setLoggedIn] = useState(false);
+
+const handleLogin = () => { if (username && password) { setLoggedIn(true); } };
+
+if (loggedIn) { return ( <div className="min-h-screen bg-black flex items-center justify-center text-white"> <motion.h1 className="text-4xl font-bold" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} > 🌟 مرحباً بك في ZOLTAN يا {username} 🌟 </motion.h1> </div> ); }
+
+return ( <div className="min-h-screen bg-black flex items-center justify-center"> <motion.div className="w-full max-w-md p-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} > <Card className="rounded-2xl shadow-lg bg-gradient-to-br from-yellow-900 to-black border border-yellow-500"> <CardContent className="p-6"> <motion.h2 className="text-3xl font-bold text-center mb-6 text-yellow-400" initial={{ y: -10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} > 🔐 دخول عالم ZOLTAN </motion.h2> <Input placeholder="اسم المستخدم" className="mb-4 bg-black text-white border-yellow-500" value={username} onChange={(e) => setUsername(e.target.value)} /> <Input type="password" placeholder="كلمة المرور" className="mb-6 bg-black text-white border-yellow-500" value={password} onChange={(e) => setPassword(e.target.value)} /> <Button
+className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-bold"
+onClick={handleLogin}
+> دخول </Button> </CardContent> </Card> </motion.div> </div> ); }
+
+<img width="1024" height="1536" alt="file_0000000052146246a87bcf3d97b9db2f" src="https://github.com/user-attachments/assets/10effb7f-976b-4573-a562-a003956fce0f" />
+<img width="1024" height="1536" alt="file_0000000052146246a87bcf3d97b9db2f" src="https://github.com/user-attachments/assets/02dede11-ac0c-4df9-8e5b-65f3c7702869" />
+# zoltan
+عالم فخم للتعارف والمكالمات والمهام والربح… هذا هو ZOLTAN الحقيقي.ϻÃŘŴÃŇzoltan
